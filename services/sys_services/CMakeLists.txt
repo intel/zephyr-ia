@@ -1,0 +1,4 @@
+add_subdirectory_ifdef(CONFIG_HOST_IA_SERVICE host_services)
+zephyr_sources_ifdef(CONFIG_SYS_IA_SERVICE resource_table.c)
+zephyr_sources_ifdef(CONFIG_SYS_IA_SERVICE sys_service.c)
+zephyr_include_directories(include)

@@ -1,0 +1,6 @@
+config SYS_IA_SERVICE
+	bool "SYS Service"
+	help
+	  Enable System service.
+
+rsource "host_services/Kconfig"

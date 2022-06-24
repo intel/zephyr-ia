@@ -1,0 +1,6 @@
+#Placeholder to add Kconfig other services like eclite, oob, etc
+#Uncomment below placeholder when the respective services is enabled.
+
+rsource "sys_services/Kconfig"
+rsource "user_app_framework/Kconfig"
+rsource "fw_version/Kconfig"

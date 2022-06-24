@@ -1,0 +1,46 @@
+# Kconfig - host communication configuration options
+#
+# Copyright (c) 2021 Intel Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+comment "pse-host HECI protocol support"
+
+config SMHI
+	bool "enable the SMHI client"
+	default y
+	help
+	  SMHI is a basic system HECI client used by host to get basic
+	  fw status and info
+
+config HECI_MSG_DUMP
+	bool "if HECI message dumping is neeed for debugging"
+	depends on LOG
+	help
+	  This configuration is used for HECI debugging, to print all
+	  HECI in/out message
+
+config HECI_MAX_MSG_SIZE
+	int "max message size of HECI protocol"
+	default 4096
+	help
+	  Set this to config max message size of HECI protocol
+
+config HECI_PAGE_SIZE
+	int "max page size of HECI protocol"
+	default 4096
+	help
+	  Set this to config page size of HECI protocol,
+	  equals the page size of pse sram
+
+config HECI_FLOW_CONTROL_WAIT_TIMEOUT
+	int "timeout in ms to wait flow control when send heci message"
+	default 5000
+	help
+	  The max time in ms that the heci client message sending will
+	  wait for the flow control from peer client.
+
+module = SMHI_IA
+module-str = smhi
+source "subsys/logging/Kconfig.template.log_config"
