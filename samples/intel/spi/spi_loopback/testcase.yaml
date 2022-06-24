@@ -1,0 +1,11 @@
+common:
+  depends_on: spi
+  tags: drivers spi
+  platform_exclude: ehl_crb
+tests:
+  drivers.spi.loopback:
+    harness: ztest
+    harness_config:
+      fixture: spi_loopback
+  driver.spi.loopback.internal:
+    filter: CONFIG_SPI_LOOPBACK_MODE_LOOP

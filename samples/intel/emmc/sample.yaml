@@ -1,0 +1,12 @@
+# Copyright (c) 2021 Intel Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+
+sample:
+  name: eMMC with Fat filesystem sample
+  platforms: ehl_crb
+tests:
+  sample.filesystem.fat_fs:
+    depends_on: emmc
+    harness: console
+    tags: samples

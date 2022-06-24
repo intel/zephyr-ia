@@ -1,0 +1,14 @@
+# Copyright (c) 2021 Intel Corporation
+#
+# SPDX-License-Identifier: Apache-2.0
+
+sample:
+  description: GPIO sample app.
+  name: gpio
+  platforms: ehl_crb
+common:
+    tags: samples
+    harness: GPIO
+    harness_config:
+      type: one_line
+    depends_on: gpio
