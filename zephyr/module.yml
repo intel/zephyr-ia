@@ -1,0 +1,4 @@
+name: zephyr_ia
+build:
+  cmake: .
+  kconfig: Kconfig.intel

@@ -1,0 +1,7 @@
+# Copyright (c) 2020-2022 Intel Corp.
+# SPDX-License-Identifier: Apache-2.0
+
+menu "Intel Internal"
+
+rsource "services/Kconfig"
+endmenu
