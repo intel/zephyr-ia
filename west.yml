@@ -49,11 +49,11 @@ manifest:
           - tinycrypt
 
     - name: os.rtos.zephyr.iot.hal-intel
-      revision: main
+      revision: ia_opensource
       remote: iotg
       path: modules/hal/intel
     - name: os.rtos.zephyr.iot.zephyr-iotg
-      revision: main
+      revision: ia_opensource
       remote: iotg
       path: zephyr-iotg
 
