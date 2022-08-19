@@ -19,8 +19,8 @@ manifest:
     remote: upstream
 
   remotes:
-    - name: iotg
-      url-base: https://github.com/intel-innersource
+    - name: intel
+      url-base: https://github.com/intel
     - name: upstream
       url-base: https://github.com/zephyrproject-rtos
 
@@ -29,32 +29,27 @@ manifest:
   # Please add items below based on alphabetical order
   projects:
 
-    - name: os.rtos.zephyr.iot.zephyr
+    - name: zephyr
       path: zephyr
-      revision: zephyr_non_upstream_2.7.2
-      remote: iotg
+      revision: intel-ehl-ia
+      remote: intel
       import:
         name-whitelist:
           - ci-tools
-          - cmsis
           - civetweb
           - fatfs
-          - hal_st
-          - littlefs
           - mbedtls
-          - mipi-sys-t
           - net-tools
           - segger
-          - tinycbor
           - tinycrypt
 
-    - name: os.rtos.zephyr.iot.hal-intel
-      revision: ia_opensource
-      remote: iotg
+    - name: sedi-drivers
+      revision: zephyr-ia
+      remote: intel
       path: modules/hal/intel
-    - name: os.rtos.zephyr.iot.zephyr-iotg
-      revision: ia_opensource
-      remote: iotg
+    - name: rtos-if-drivers
+      revision: zephyr-ia
+      remote: intel
       path: zephyr-iotg
 
   self:
